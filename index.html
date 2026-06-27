@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PRISM CODE TRANSLATER (-.-. --- -.. . / - .-. .- -. ... .-.. .- - --- .-.)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+<style>
+  body {
+    background-color: #3576ec;
+  }
+  #heading {
+    color: white;
+    font-family: Roboto, Sans-serif;
+    left: 60%;
+    top: 50px;
+  }
+  #translateTypeAsker {
+    font-family: Roboto, Sans-serif;
+    color: white;
+  }
+</style>
+<body>
+  <h1 id="heading">PRISM Code Translater</h1>
+  <div id="translateTypeAsker">
+    <label for="codeTypes">Choose a code type to translate.</label>
+    <select id="codeTypes">
+      <option>Number Systems</option>
+      <option>Computer Encodings</option>
+      <option>Communications</option>
+      <option>Ciphers</option>
+      <option>Colors</option>
+    </select>
+  </div>
+</body>
+<script>
+  let codeType = document.getElementById("codeTypes").value;
+  console.log(codeType);
+</script>
