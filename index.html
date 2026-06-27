@@ -24,6 +24,16 @@
   #codeTypes {
     text-align: center;
   }
+  #input {
+    background-color: #4B4F6F;
+    color: #f2f4f8;
+    border: 2px solid #6d73a0;
+    border-radius: 5px;
+    width: 450px;
+    height: 150px;
+    font-size: 15px;
+    resize: vertical;
+  }
 </style>
 <body>
   <h1 id="heading">PRISM Code Translater</h1>
@@ -37,10 +47,14 @@
       <option>Colors</option>
     </select>
   </div>
+  <div id="inputBox">
+    <label for="input">Input</label>
+    <textarea id="input" placeholder="Input text here. . ."></textarea>
+  </div>
 </body>
 <script>
   const typesDropdown = document.getElementById("codeTypes");
-
+  const input = document.getElementById("input").value;
   typesDropdown.addEventListener("change", () => {
       const codeType = typesDropdown.value;
       console.log(codeType);
