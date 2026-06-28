@@ -34,11 +34,25 @@
     height: 150px;
     font-size: 15px;
     resize: none;
+    left: 20%;
+    padding: 10px;
   }
   #inputText {
     font-family: Roboto, Sans-serif;
     color: #f2f4f8;
     vertical-align: top;
+    padding: 10px;
+  }
+  #outputBox {
+    background-color: #4B4F6F;
+    color: #f2f4f8;
+    border: 2px solid #6d73a0;
+    border-radius: 5px;
+    width: 450px;
+    height: 150px;
+    font-size: 15px;
+    resize: none;
+    left: 50%;
     padding: 10px;
   }
 </style>
@@ -58,10 +72,15 @@
     <label id="inputText" for="input">Input</label>
     <textarea id="input" placeholder="Input text here. . ."></textarea>
   </div>
+  <div id="outputBox">
+    <label id="outputText" for="output">Output</label>
+    <textarea id="outputBox" placeholder="Translated text" readonly></textarea>
+  </div>
 </body>
 <script>
   const typesDropdown = document.getElementById("codeTypes");
   const input = document.getElementById("input").value;
+  document.getElementById("output").value = translatedText;
   typesDropdown.addEventListener("change", () => {
       const codeType = typesDropdown.value;
       console.log(codeType);
